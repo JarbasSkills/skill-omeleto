@@ -1,13 +1,14 @@
-# <img src='./res/icon/dust_icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/>DUST Skill
+# <img src='./ui/icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/>Omeleto Skill
 
-![](./res/dust_logo.png)
+![](./ui/logo.png)
 
 ## About 
 
-Dust short science fiction movies for Mycroft
+Omeletp short films for Mycroft
 
 ![](./gui.png)
 ![](./gui2.png)
+![](./gui3.png)
 
 ## Installation Notes
 
@@ -15,14 +16,14 @@ this requires [skill-better-playback-control](https://github.com/JarbasSkills/sk
 
 ## Examples 
 
-* "open dust"
-* "play sci fi short movie"
-* "play dust"
+* "open omeleto"
+* "play short movie"
+* "play omeleto"
 
 ## Credits 
 - JarbasAl
 - [AIIX ](https://github.com/AIIX/) - GUI
-- [Dust](https://www.youtube.com/c/watchdust)
+- [Omeleto](https://www.youtube.com/c/Omeleto)
 
 ## Category
 **Entertainment**

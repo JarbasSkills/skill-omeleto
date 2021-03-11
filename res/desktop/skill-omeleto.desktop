@@ -4,8 +4,8 @@ X-KDE-StartupNotify=false
 Version=1.0
 Terminal=false
 Type=Application
-Name=DUST
-Exec=mycroft-gui-app --hideTextInput --skill=skill-dust.jarbasskills.home
-Icon=dust_icon
+Name=Omeleto
+Exec=mycroft-gui-app --hideTextInput --skill=skill-omeleto.jarbasskills.home
+Icon=omeleto_icon.png
 Categories=VoiceApp
 StartupNotify=false

@@ -1,9 +1,9 @@
 {
-  "name": "DUST Skill",
-  "skillname": "skill-dust",
+  "name": "Omeleto Skill",
+  "skillname": "skill-omeleto",
   "authorname": "JarbasSkills",
   "foldername": "",
-  "url": "https://github.com/JarbasSkills/skill-dust",
+  "url": "https://github.com/JarbasSkills/skill-omeleto",
   "branch": "v0.1",
   "desktopFile": false,
   "warning": "",
@@ -16,8 +16,8 @@
     "ia64"
   ],
   "examples": [
-    "open dust",
-    "play science fiction short movie",
-    "play dust"
+    "open omeleto",
+    "play short film",
+    "play omeleto"
   ]
 }
