@@ -23,7 +23,7 @@ class OmeletoSkill(OVOSCommonPlaybackSkill):
 
     def initialize(self):
         url = "https://www.youtube.com/c/Omeleto/videos"
-        bootstrap = "https://raw.githubusercontent.com/OpenJarbas/streamindex/main/omeleto.json"
+        bootstrap = "https://github.com/JarbasSkills/skill-omeleto/raw/dev/bootstrap.json"
         self.archive.bootstrap_from_url(bootstrap)
         self.archive.monitor(url)
         self.archive.setDaemon(True)

@@ -1,20 +1,18 @@
 # <img src='./ui/icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/>Omeleto Skill
 
-![](./ui/logo.png)
+![](ui/logo.png)
 
-## About 
+## About
 
 Omeletp short films for Mycroft
 
-![](./gui.png)
-![](./gui2.png)
-![](./gui3.png)
+![](gui.png)
+![](gui2.png)
+![](gui3.png)
 
-## Installation Notes
+this skill requires [OCP](https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin)
 
-this requires [skill-better-playback-control](https://github.com/JarbasSkills/skill-better-playback-control), it will blacklist and replace the official mycroft skill
-
-## Examples 
+## Examples
 
 * "open omeleto"
 * "play short movie"
@@ -42,17 +40,22 @@ this requires [skill-better-playback-control](https://github.com/JarbasSkills/sk
 - `tag` - link to github release / branch / commit
 - `version` - link to release/commit of platform repo where this was tested
 
+## Credits
 
-## Credits 
 - JarbasAl
 - [AIIX ](https://github.com/AIIX/) - GUI
 - [Omeleto](https://www.youtube.com/c/Omeleto)
 
 ## Category
+
 **Entertainment**
 
 ## Tags
-#scifi
-#shortfilms
-#video
-#entertainment
+
+# scifi
+
+# shortfilms
+
+# video
+
+# entertainment
