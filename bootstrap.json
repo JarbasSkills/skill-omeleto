@@ -9602,5 +9602,18 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/6DIeL4-wwBo/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=E1UjBrBfy9E": {
+        "author": "Omeleto",
+        "title": "A man with OCD fears he'll be murdered if he doesn't do his rituals. | Sit With Fear",
+        "url": "https://youtube.com/watch?v=E1UjBrBfy9E",
+        "duration": 985,
+        "upload_ts": 1672963200.0,
+        "tags": [
+            "sit with fear",
+            "horror short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/E1UjBrBfy9E/sddefault.jpg"
     }
 }
