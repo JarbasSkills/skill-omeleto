@@ -9615,5 +9615,31 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/E1UjBrBfy9E/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=1McreyiXAlU": {
+        "author": "Omeleto",
+        "title": "An insecure man argues with his girlfriend, then goes work with a black eye. | Lost Boy",
+        "url": "https://youtube.com/watch?v=1McreyiXAlU",
+        "duration": 697,
+        "upload_ts": 1673308800.0,
+        "tags": [
+            "lost boy",
+            "drama short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/1McreyiXAlU/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=eCYC38P7gDw": {
+        "author": "Omeleto",
+        "title": "A man is down on his luck. Then he buys a magical refrigerator. | Refrigerate After Opening",
+        "url": "https://youtube.com/watch?v=eCYC38P7gDw",
+        "duration": 370,
+        "upload_ts": 1653004800.0,
+        "tags": [
+            "refrigerate after opening",
+            "comedy short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/eCYC38P7gDw/sddefault.jpg"
     }
 }
