@@ -9680,5 +9680,18 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/XNWwGXMEErQ/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=mEO8NMOs9-c": {
+        "author": "Omeleto",
+        "title": "An army of wasps fights a group of kids for the same meal. | Pests",
+        "url": "https://youtube.com/watch?v=mEO8NMOs9-c",
+        "duration": 401,
+        "upload_ts": 1673654400.0,
+        "tags": [
+            "pests",
+            "animation",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/mEO8NMOs9-c/sddefault.jpg"
     }
 }
