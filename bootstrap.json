@@ -9746,5 +9746,18 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/-_WrjaVPh1E/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=MTgHzTawQT0": {
+        "author": "Omeleto",
+        "title": "A teenage boy gets ready to join a gang -- with a strange initiation ritual. | Titan",
+        "url": "https://youtube.com/watch?v=MTgHzTawQT0",
+        "duration": 1148,
+        "upload_ts": 1674086400.0,
+        "tags": [
+            "titan",
+            "drama short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/MTgHzTawQT0/sddefault.jpg"
     }
 }
