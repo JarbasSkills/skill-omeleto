@@ -9889,5 +9889,18 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/tr6FPXPB0v8/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=zzoDd1Nfg-U": {
+        "author": "Omeleto",
+        "title": "A mysterious woman tells 3 criminals a story that may seal their fates. | Wolves",
+        "url": "https://youtube.com/watch?v=zzoDd1Nfg-U",
+        "duration": 818,
+        "upload_ts": 1675209600.0,
+        "tags": [
+            "wolves",
+            "drama short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/zzoDd1Nfg-U/sddefault.jpg"
     }
 }
