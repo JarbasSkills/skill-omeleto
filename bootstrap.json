@@ -10071,5 +10071,18 @@
             "omeleto"
         ],
         "thumbnail": "https://i.ytimg.com/vi/yp7KNxM9iHw/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=Rk8fMApL7Fw": {
+        "author": "Omeleto",
+        "title": "An extra in a Kubrick film falls in love with an assistant director. | Kubrick by Candlelight",
+        "url": "https://youtube.com/watch?v=Rk8fMApL7Fw",
+        "duration": 1101,
+        "upload_ts": 1676592000.0,
+        "tags": [
+            "kubrick by candlelight",
+            "romance short film",
+            "omeleto"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/Rk8fMApL7Fw/sddefault.jpg"
     }
 }
