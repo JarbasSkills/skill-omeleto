@@ -10132,5 +10132,16 @@
             "visitors"
         ],
         "thumbnail": "https://i.ytimg.com/vi/-XvsilVVft0/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=lzWLxQyqjw8": {
+        "author": "Omeleto",
+        "title": "A middle-aged widow is blackmailed by her dead husband. | The Wages of Sin",
+        "url": "https://youtube.com/watch?v=lzWLxQyqjw8",
+        "duration": 842,
+        "upload_ts": 1677110400.0,
+        "tags": [
+            "the wages of sin"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/lzWLxQyqjw8/sddefault.jpg"
     }
 }
