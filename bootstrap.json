@@ -10165,5 +10165,16 @@
             "the exit plan"
         ],
         "thumbnail": "https://i.ytimg.com/vi/mzIGMJBOMRU/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=pyJ5qGZ6wEs": {
+        "author": "Omeleto",
+        "title": "A man who teaches mindfulness gets angry. Then it's broadcast to the world. | A Mind Full",
+        "url": "https://youtube.com/watch?v=pyJ5qGZ6wEs",
+        "duration": 582,
+        "upload_ts": 1677628800.0,
+        "tags": [
+            "a mind full"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/pyJ5qGZ6wEs/sddefault.jpg"
     }
 }
