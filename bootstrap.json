@@ -10416,5 +10416,16 @@
             "lead/follow"
         ],
         "thumbnail": "https://i.ytimg.com/vi/1Tf2fPAkWcg/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=cGnUKgI0N6A": {
+        "author": "Omeleto",
+        "title": "A young woman who has bizarre terrors goes to a friend's home for dinner. | Maggie and the Monster",
+        "url": "https://youtube.com/watch?v=cGnUKgI0N6A",
+        "duration": 909,
+        "upload_ts": 1680220800.0,
+        "tags": [
+            "maggie and the monster"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/cGnUKgI0N6A/sddefault.jpg"
     }
 }
