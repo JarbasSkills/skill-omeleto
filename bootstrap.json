@@ -10438,5 +10438,25 @@
             "second date"
         ],
         "thumbnail": "https://i.ytimg.com/vi/BLfCsq6Mw-g/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=mvEdgCjInI8": {
+        "author": "Omeleto",
+        "title": "A clown struggles to make ends meet. Then he has a chance to get some cash. | Send In the Clowns",
+        "url": "https://youtube.com/watch?v=mvEdgCjInI8",
+        "duration": 777,
+        "upload_ts": 1680739200.0,
+        "tags": [],
+        "thumbnail": "https://i.ytimg.com/vi/mvEdgCjInI8/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=vuBNMwgCMec": {
+        "author": "Omeleto",
+        "title": "A young man from Uganda has an American dream. But it may come to an end. | The Night I Left America",
+        "url": "https://youtube.com/watch?v=vuBNMwgCMec",
+        "duration": 827,
+        "upload_ts": 1680566400.0,
+        "tags": [
+            "the night i left america"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/vuBNMwgCMec/sddefault.jpg"
     }
 }
