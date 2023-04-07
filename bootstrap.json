@@ -10458,5 +10458,16 @@
             "the night i left america"
         ],
         "thumbnail": "https://i.ytimg.com/vi/vuBNMwgCMec/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=BHUcd0F6k-E": {
+        "author": "Omeleto",
+        "title": "A Black woman is accused of shoplifting. Then it escalates out of control. | Alex",
+        "url": "https://youtube.com/watch?v=BHUcd0F6k-E",
+        "duration": 535,
+        "upload_ts": 1680739200.0,
+        "tags": [
+            "alex"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/BHUcd0F6k-E/sddefault.jpg"
     }
 }
