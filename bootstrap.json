@@ -10469,5 +10469,16 @@
             "alex"
         ],
         "thumbnail": "https://i.ytimg.com/vi/BHUcd0F6k-E/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=tj1WaL_Y6oY": {
+        "author": "Omeleto",
+        "title": "An actor has an important audition on the day of his father's funeral. | Throw Your Heart Over First",
+        "url": "https://youtube.com/watch?v=tj1WaL_Y6oY",
+        "duration": 537,
+        "upload_ts": 1680825600.0,
+        "tags": [
+            "throw your heart over first"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/tj1WaL_Y6oY/sddefault.jpg"
     }
 }
