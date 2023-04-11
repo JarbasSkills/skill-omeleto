@@ -10491,5 +10491,16 @@
             "evie"
         ],
         "thumbnail": "https://i.ytimg.com/vi/zXK9E_BwNuM/sddefault.jpg"
+    },
+    "https://youtube.com/watch?v=VWteaww-57U": {
+        "author": "Omeleto",
+        "title": "A young man tries to buy ecstasy for his disabled father. The reason why is heartwarming. | Ecstasy",
+        "url": "https://youtube.com/watch?v=VWteaww-57U",
+        "duration": 1082,
+        "upload_ts": 1681084800.0,
+        "tags": [
+            "ecstasy"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/VWteaww-57U/sddefault.jpg"
     }
 }
