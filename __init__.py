@@ -1,64 +1,47 @@
+import random
 from os.path import join, dirname
 
-from ovos_plugin_common_play.ocp import MediaType, PlaybackType
-from ovos_utils.log import LOG
-from ovos_utils.parse import fuzzy_match
-from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill, \
-    ocp_search, ocp_featured_media
-from youtube_archivist import YoutubeMonitor
-import random
+import requests
+from json_database import JsonStorageXDG
+
+from ovos_utils.ocp import MediaType, PlaybackType
+from ovos_workshop.decorators.ocp import ocp_search, ocp_featured_media
+from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
 
 
 class OmeletoSkill(OVOSCommonPlaybackSkill):
 
-    def __init__(self):
-        super().__init__("Omeleto")
-        self.supported_media = [MediaType.MOVIE,
-                                MediaType.GENERIC,
-                                MediaType.SHORT_FILM,
-                                MediaType.VIDEO]
-        self.archive = YoutubeMonitor("omeleto",
-                                      blacklisted_kwords=["trailer"],
-                                      logger=LOG)
+    def __init__(self, *args, **kwargs):
+        self.supported_media = [MediaType.SHORT_FILM]
         self.skill_icon = join(dirname(__file__), "ui", "icon.png")
+        self.archive = JsonStorageXDG("omeleto", subfolder="OCP")
+        super().__init__(*args, **kwargs)
 
     def initialize(self):
-        bootstrap = "https://github.com/JarbasSkills/skill-omeleto/raw/dev/bootstrap.json"
-        self.archive.bootstrap_from_url(bootstrap)
-        self.schedule_event(self._sync_db, random.randint(3600, 24 * 3600))
+        self._sync_db()
+        self.load_ocp_keywords()
+
+    def load_ocp_keywords(self):
+        title = []
+
+        for url, data in self.archive.items():
+            t = data["title"]  # .split("|")[0].split("(")[0]
+            if "|" in t:
+                t = t.split("|")[-1].strip()
+                if t != "Omeleto":
+                    title.append(t)
+
+        self.register_ocp_keyword(MediaType.SHORT_FILM,
+                                  "short_movie_name", title)
+        self.register_ocp_keyword(MediaType.SHORT_FILM,
+                                  "shorts_streaming_provider",
+                                  ["Omeleto"])
 
     def _sync_db(self):
-        url = "https://www.youtube.com/c/Omeleto/videos"
-        self.archive.parse_videos(url)
-        self.schedule_event(self._sync_db, random.randint(3600, 24*3600))
-
-    # matching
-    def normalize_title(self, title):
-        title = title.lower().strip()
-        title = self.remove_voc(title, "omeleto")
-        title = self.remove_voc(title, "movie")
-        title = self.remove_voc(title, "video")
-        title = self.remove_voc(title, "scifi")
-        title = self.remove_voc(title, "short")
-        title = self.remove_voc(title, "horror")
-        title = title.replace("|", "").replace('"', "") \
-            .replace(':', "").replace('”', "").replace('“', "") \
-            .strip().split("|")[-1]
-        return " ".join(
-            [w for w in title.split(" ") if w])  # remove extra spaces
-
-    def match_skill(self, phrase, media_type):
-        score = 0
-        if self.voc_match(phrase, "omeleto"):
-            score += 40
-        if media_type == MediaType.SHORT_FILM:
-            score += 25
-        return score
-
-    def calc_score(self, phrase, match, base_score=0):
-        score = base_score
-        score += 100 * fuzzy_match(phrase.lower(), match["title"].lower())
-        return min(100, score)
+        bootstrap = "https://github.com/JarbasSkills/skill-omeleto/raw/dev/bootstrap.json"
+        data = requests.get(bootstrap).json()
+        self.archive.merge(data)
+        self.schedule_event(self._sync_db, random.randint(3600, 24 * 3600))
 
     # ovos common play
     def get_playlist(self, num_entries=250):
@@ -75,28 +58,34 @@ class OmeletoSkill(OVOSCommonPlaybackSkill):
 
     @ocp_search()
     def search_db(self, phrase, media_type):
-        if self.voc_match(phrase, "omeleto"):
-            pl = self.get_playlist()
-            if self.voc_match(phrase, "omeleto", exact=True):
-                pl["match_confidence"] = 100
-            yield pl
+        base_score = 15 if media_type == MediaType.SHORT_FILM else 0
+        entities = self.ocp_voc_match(phrase)
+        base_score += 30 * len(entities)
 
-        if media_type == MediaType.SHORT_FILM:
+        title = entities.get("short_movie_name")
+        skill = "shorts_streaming_provider" in entities  # skill matched
+
+        if title:
             # only search db if user explicitly requested short films
-            base_score = self.match_skill(phrase, media_type)
-            phrase = self.normalize_title(phrase)
-            for url, video in self.archive.db.items():
-                yield {
-                    "title": video["title"],
-                    "match_confidence": self.calc_score(phrase, video, base_score),
-                    "media_type": MediaType.SHORT_FILM,
-                    "uri": "youtube//" + url,
-                    "playback": PlaybackType.VIDEO,
-                    "skill_icon": self.skill_icon,
-                    "skill_id": self.skill_id,
-                    "image": video["thumbnail"],
-                    "bg_image": video["thumbnail"],
-                }
+            if title:
+                candidates = [video for video in self.archive.values()
+                              if title.lower() in video["title"].lower()]
+                for video in candidates:
+                    yield {
+                        "title": video["title"],
+                        "author": video["author"],
+                        "match_confidence": min(100, base_score),
+                        "media_type": MediaType.SHORT_FILM,
+                        "uri": "youtube//" + video["url"],
+                        "playback": PlaybackType.VIDEO,
+                        "skill_icon": self.skill_icon,
+                        "skill_id": self.skill_id,
+                        "image": video["thumbnail"],
+                        "bg_image": video["thumbnail"],
+                    }
+
+        if skill:
+            yield self.get_playlist()
 
     @ocp_featured_media()
     def featured_media(self):
@@ -110,8 +99,12 @@ class OmeletoSkill(OVOSCommonPlaybackSkill):
             "skill_icon": self.skill_icon,
             "bg_image": video["thumbnail"],
             "skill_id": self.skill_id
-        } for video in self.archive.sorted_entries()]
+        } for video in self.archive.values()]
 
 
-def create_skill():
-    return OmeletoSkill()
+if __name__ == "__main__":
+    from ovos_utils.messagebus import FakeBus
+
+    s = OmeletoSkill(bus=FakeBus(), skill_id="t.fake")
+    for r in s.search_db("play First Contact", MediaType.MOVIE):
+        print(r)
